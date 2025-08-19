@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWS Polly Text‑to‑Speech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Text to Speech by Amazon Polly</h1>
+  </header>
+
+  <main>
+    <div class="card">
+      <label for="textInput">Text:</label>
+      <textarea id="textInput" placeholder="Enter text here..." maxlength="3000"></textarea>
+      <div class="row">
+        <div class="field">
+          <label for="voiceId">Voice:</label>
+          <select id="voiceId">
+            <option value="Joanna">Joanna (en-US)</option>
+            <option value="Matthew">Matthew (en-US)</option>
+            <option value="Zeina">Zeina (ar-XA)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="format">Format:</label>
+          <select id="format">
+            <option value="mp3" selected>MP3</option>
+          </select>
+        </div>
+      </div>
+      <div class="row between">
+        <small id="counter">0 / 3000</small>
+        <button id="convertBtn">Convert to Speech</button>
+      </div>
+      <div id="status" class="status"></div>
+      <div id="result" class="result hidden">
+        <audio id="player" controls></audio>
+        <a id="downloadLink" class="download" download="speech.mp3">Download Audio</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <small>by eng. kirolles ezzat </small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
